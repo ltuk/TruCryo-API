@@ -32,7 +32,7 @@ $client = new Client([
 ]);
 
 $response = $client->request('GET', 'https://prod-api.trucryo.com/unlockCode', [
-    'query' => ['serialNumber' => '0000', 'unlockTimeSelected' => '30', 'timeSelected' => '0', 'authcode' => '00000', 'token' => 'abcdefghijklmnopqrstuvwxyz']
+    'query' => ['serialNumber' => '0000', 'unlockTime' => '30 Mins', 'authcode' => '00000', 'token' => 'abcdefghijklmnopqrstuvwxyz']
 ]);
 
 $body = $response->getBody();
@@ -44,7 +44,6 @@ echo $body;
 | Name | Description |
 | ------------- |:-------------:|
 | serialNumber  | Serial number of device     |
-| unlockTimeSelected      | Requeset an unlock - Time you need the device unlocked for in minutes. Available values: 0, 30, 60, Unlock     |
-| timeSelected      | Spray as you pay - Time you need the device unlocked for in minutes. Available values: 0, 60, 120, 300, 600    |
-| authcode |
+| unlockTime    | Unlock time duration. Available values: 30 Mins, 60 Mins, +3 Days, +5 Days, +7 Days, +1 Month, Unlock     |
+| authcode | Auth code
 token | API Auth Token
