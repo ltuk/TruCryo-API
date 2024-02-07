@@ -9,7 +9,7 @@ $client = new Client([
 ]);
 
 $response = $client->request('GET', 'https://prod-api.trucryo.com/unlockCode', [
-    'query' => ['serialNumber' => '0000', 'unlockTimeSelected' => '30', 'timeSelected' => '0', 'authcode' => '00000', 'token' => 'abcdefghijklmnopqrstuvwxyz']
+    'query' => ['serialNumber' => '0000', 'unlockTime' => '30 Mins', 'authcode' => '00000', 'token' => 'abcdefghijklmnopqrstuvwxyz']
 ]);
 
 $body = $response->getBody();
