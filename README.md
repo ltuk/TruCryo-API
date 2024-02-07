@@ -23,7 +23,7 @@ require __DIR__ . '/vendor/autoload.php';
 ```
 
 Here's how to send an unlock request:
-Just replace the serialNumber, unlockTimeSelected, timeSelected, authcode and token with the correct values.
+Just replace the serialNumber, unlockTime, authcode and token with the correct values.
 See table below for more information.
 ```
 $client = new Client([
